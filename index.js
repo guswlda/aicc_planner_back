@@ -13,6 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
     origin: 'https://myplanner.guswldaiccproject.com',
+    origin: 'http://localhost:3000',
     credentials: true,
   })
 );
