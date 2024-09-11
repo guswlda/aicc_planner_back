@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://myplanner.guswldaiccproject.com',
     credentials: true,
   })
 );
@@ -20,7 +20,7 @@ app.use(
 app.use(cookieParser());
 
 app.get('/', (req, res) => {
-  res.send('Hello World https not completed');
+  res.send('Hello World https not');
 });
 
 // 'uploads' 폴더를 정적 파일로 서빙
