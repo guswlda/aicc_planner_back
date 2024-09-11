@@ -10,24 +10,24 @@ const app = express(); // express 모듈을 app 변수 할당
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// app.use(
-//   cors({
-//     origin: 'https://myplanner.guswldaiccproject.com',
-//     credentials: true,
-//   })
-// );
+app.use(
+  cors({
+    origin: 'http://localhost:3000',
+    credentials: true,
+  })
+);
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 // const corsOption2 = {
 //   origin: 'http://localhost:3000', // 허용할 주소
 //   credentials: true, // 인증 정보 허용
 // };
 
-const corsOptions = [
-  'http://localhost:3000',
-  'https://myplanner.guswldaiccproject.com',
-];
+// const corsOptions = [
+//   'http://localhost:3000',
+//   'https://myplanner.guswldaiccproject.com',
+// ];
 
 app.use(cookieParser());
 
