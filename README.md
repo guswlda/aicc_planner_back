@@ -123,7 +123,7 @@
   <img src="./uploads/calendar.png">
 </p>
 
-
+```
 POST /post_calendar
 Content-Type: application/json
 
@@ -132,6 +132,8 @@ Content-Type: application/json
   "startDate": "2024-10-01",
   "endDate": "2024-10-07"
 }
+
+```
 
 ### 테스트는 이런 식으로 동작합니다
 
