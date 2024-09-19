@@ -89,14 +89,14 @@
 📦 users
 ├── user_idx: SERIAL PRIMARY KEY      -- 자동 증가하는 기본 키
 ├── name: VARCHAR(100) NOT NULL      -- 사용자 이름
-├── email: VARCHAR(100) UNIQUE NOT NULL  -- 사용자 이메일 (유니크 제약 조건 있음)
+├── email: VARCHAR(100) UNIQUE NOT NULL  -- 사용자 이메일 
 └── password: VARCHAR(100) NOT NULL  -- 사용자 비밀번호
 
 📦 travel_project
 ├── project_idx: SERIAL PRIMARY KEY   -- 자동 증가하는 기본 키
-├── user_idx: INT                     -- 사용자 테이블과 조인 컬럼 (외래키 X - 제약 조건이 많음)
+├── user_idx: INT                     -- 사용자 테이블과 조인 컬럼 
 ├── project_title: VARCHAR(255)       -- 프로젝트 제목
-├── project_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 프로젝트 생성일 (자동 생성)
+├── project_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 프로젝트 생성일
 ├── start_date: DATE NOT NULL         -- 프로젝트 시작일
 ├── end_date: DATE NOT NULL           -- 프로젝트 종료일
 ├── update_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 프로젝트 업데이트 날짜
