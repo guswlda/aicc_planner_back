@@ -143,8 +143,21 @@ Content-Type: application/json
 ```
 
 <p align="center">
-  <img src="./uploads/createplanner.png">
+  <img src="./uploads/createproject.png">
 </p>
+
+```
+GET /get_calendar_data/:user_idx
+
+[
+  {
+    "project_idx": 1,
+    "start_date": "2024-09-01",
+    "end_date": "2024-09-10"
+  }
+]
+
+```
 
 ```
 GET /get_travel_data/:user_idx
