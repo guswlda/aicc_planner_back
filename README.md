@@ -124,6 +124,13 @@
   <img src="./uploads/calendar.png">
 </p>
 
+### 날짜 선택
+
+<p align="center">
+  <img src="./uploads/createplanner.png">
+</p>
+
+
 ```
 POST /post_calendar
 Content-Type: application/json
