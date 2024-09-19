@@ -120,7 +120,7 @@
 
 ## 3.  구현 기능
 
-## 캘린더 기능
+### 캘린더 기능
 
 <p align="center">
   <img src="./uploads/calendar.png">
