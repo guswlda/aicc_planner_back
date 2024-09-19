@@ -1,6 +1,6 @@
 # CRM 서비스 프로젝트
 
-# My Planner
+My Planner
 
 
 <p align="center">
@@ -33,7 +33,7 @@
 </p>
 <p align="justify">
 
-## 프로젝트 소개
+## 프로젝트 개발 목적
 
   * 체계적인 여행계획을 세울 수 있는 todo 리스트 
 
