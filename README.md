@@ -143,7 +143,7 @@ Content-Type: application/json
 ```
 
 <p align="center">
-  <img src="./uploads/createproject.png">
+  <img src="./uploads/createplanner.png">
 </p>
 
 ```
