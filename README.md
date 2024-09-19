@@ -16,7 +16,7 @@
 
 </p>
 
-# 1. Getting Started / 프로젝트 소개 및 개발 목적
+# 1. 프로젝트 소개 및 개발 목적
 <p align="justify">
 
 ## 프로젝트 소개
@@ -48,7 +48,7 @@
 
 </p>
 
-# 2. Development environment / 개발 환경
+# 2. 개발 환경
 
 아래 사항들이 설치가 되어있어야합니다.
 
@@ -68,6 +68,8 @@
 * EXPRESS, CORS, DOTENV, NODEMON, PG
 
 ```
+
+## 3.  구현 기능
 
 ## Running the tests / 테스트의 실행
 
