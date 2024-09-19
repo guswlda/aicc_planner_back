@@ -105,8 +105,6 @@
 ├── planner_date: DATE                -- 플래너 생성일
 ├── planner_update_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 플래너 업데이트 날짜
 └── planner_img: TEXT                 -- 플래너 이미지 URL 또는 경로
-
-
 ```
 
 ### Installing / 설치
