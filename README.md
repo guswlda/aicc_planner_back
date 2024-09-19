@@ -178,23 +178,13 @@ GET /get_travel_data/:user_idx
 
 ```
 
-### 테스트는 이런 식으로 동작합니다
+## 4. 배포
 
-왜 이렇게 동작하는지, 설명합니다
+<p align="center">
+  <img src="./uploads/fullflow.png">
+</p>
 
-```
-예시
-```
 
-### 테스트는 이런 식으로 작성하시면 됩니다
-
-```
-예시
-```
-
-## Deployment / 배포
-
-Add additional notes about how to deploy this on a live system / 라이브 시스템을 배포하는 방법
 
 ## Built With / 누구랑 만들었나요?
 
