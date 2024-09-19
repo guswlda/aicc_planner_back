@@ -7,9 +7,16 @@
   <br>
 </p>
 
-배포 URL: https://myplanner.guswldaiccproject.com
-TestID : Test@gmail.com
-TESTPW : 12345
+<p align="justify">
+  <br>
+  배포 URL: https://myplanner.guswldaiccproject.com
+  <br>
+  TestID : Test@gmail.com
+  <br>
+  TESTPW : 12345
+  <br>
+</p>
+
 
 ## Getting Started / 어떻게 시작하나요?
 
