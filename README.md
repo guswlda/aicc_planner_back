@@ -149,9 +149,6 @@ Content-Type: application/json
   <img src="./uploads/createplanner.png">
 </p>
 
-* GET -  생성된 여행 프로젝트 ID, 여행 시작 날짜, 끝 날짜 데이터
-* DB (postgresql) <=> BACK (Node.js) => FRONT (React) GET 요청
-
 ```
 GET /get_calendar_data/:user_idx
 
@@ -164,6 +161,10 @@ GET /get_calendar_data/:user_idx
 ]
 
 ```
+
+* GET -  생성된 여행 프로젝트 ID, 여행 시작 날짜, 끝 날짜 데이터
+* DB (postgresql) <=> BACK (Node.js) => FRONT (React) GET 요청
+
 ```
 PATCH /update_planner_title
 
