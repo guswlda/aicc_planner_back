@@ -14,13 +14,31 @@ exports.getData = async (req, res) => {
   }
 };
 
+// exports.getTravelData = async (req, res) => {
+//   try {
+//     const { user_idx } = req.params;
+//     const result = await database.query(
+//       'SELECT project_idx, project_title, start_date, end_date, planner_title, planner_description, planner_date, planner_img FROM travel_project WHERE user_idx=$1 ORDER BY update_date DESC',
+//       [user_idx]
+//     );
+//     res.status(201).json(result.rows);
+//   } catch (error) {
+//     console.error('Error fetching travel data:', error);
+//     res.status(500).json({ error: 'Internal Server Error' });
+//   }
+// };
+
 exports.getTravelData = async (req, res) => {
   try {
     const { user_idx } = req.params;
     const result = await database.query(
-      'SELECT project_idx, project_title, start_date, end_date, planner_title, planner_description, planner_date, planner_img FROM travel_project WHERE user_idx=$1 ORDER BY update_date DESC',
+      'SELECT project_idx, project_title, start_date, end_date, planner_title, planner_description, planner_date, planner_img FROM travel_project WHERE user_idx=$1 ORDER BY update_date DESC LIMIT 20',
       [user_idx]
     );
+
+    // 데이터 개수 로그 출력
+    console.log('Number of results:', result.rows.length);
+
     res.status(201).json(result.rows);
   } catch (error) {
     console.error('Error fetching travel data:', error);
@@ -32,7 +50,7 @@ exports.getProjectData = async (req, res) => {
   const { user_idx } = req.params;
   try {
     const result = await database.query(
-      'SELECT project_idx, project_title, start_date, end_date, planner_title, planner_description, planner_date, planner_img FROM travel_project WHERE user_idx=$1 ORDER BY update_date DESC',
+      'SELECT project_idx, project_title, start_date, end_date, planner_title, planner_description, planner_date, planner_img FROM travel_project WHERE user_idx=$1 ORDER BY update_date DESC LIMIT 20',
       [user_idx]
     );
     // console.log('Server Response:', result.rows);
