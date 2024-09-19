@@ -53,7 +53,9 @@
 아래 사항들이 설치가 되어있어야합니다.
 
 ```
-예시
+* Back : node.js
+
+* DB : Postgresql ( Mariadb, MySQL 가능)
 ```
 
 ### Installing / 설치
