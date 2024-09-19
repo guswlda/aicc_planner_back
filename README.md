@@ -39,7 +39,7 @@
   <br>
 </p>
 
-### Development environment / 개발 환경
+## Development environment / 개발 환경
 
 아래 사항들이 설치가 되어있어야합니다.
 
