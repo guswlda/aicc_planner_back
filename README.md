@@ -1,40 +1,110 @@
-# CRM 서비스 프로젝트
+# CRM 서비스 프로젝트 / My Planner
 
-## My Planner
 <p align="center">
-  <br>
   <img src="./uploads/mainpage.png">
-  <br>
 </p>
-<p align="justify">
-  <br>
+
+<P align="justify">
   배포 URL: https://myplanner.guswldaiccproject.com
-  <br>
+
+  
   TestID : Test@gmail.com
-  <br>
+
+
   TESTPW : 12345
-  <br>
-</p>
 
-
-## Getting Started / 어떻게 시작하나요?
-
-<p align="justify">
 
 </p>
 
-## 기술 스택
+# 1. 프로젝트 소개 및 개발 목적
 
-| React      | Node       |  DB   
-| :--------: | :--------: | :------: | 
-|  ![react]  |  ![node]   | ![pg]    | 
 
-### Prerequisites / 선행 조건
+## 프로젝트 소개
+  
+  *  AI를 통해 여행 계획을 작성하는 웹은 있습니다. 하지만 사용자가 직접 여행 날짜, 장소, 메모 등 하는 웹은 없습니다.
+
+
+  * 여행을 좋아하는 사용자가 자신만의 여행 일지를 커스타마이징 하는 스케쥴링 시스템.
+
+
+## 프로젝트 개발 목적
+
+  * 체계적인 여행계획을 세울 수 있는 todo 리스트 
+
+
+  * 여행 계획 뿐만 아니라 사용자가 방문했던 장소를 사진을 등록하고 메모할 수 있는 시스템
+
+
+  1. 구글 지도 제공하여 로드맵 확인 가능
+
+
+  2. 일정버튼을 클릭하면 캘린더에서 날짜를 선택
+
+
+  3. 날짜에 따라서 좌측에 나열된 장소를 클릭하면 우측에 내가 적었던 메모리스트가 나올 수 있고, 추가도 가능
+
+
+# 2. 개발 환경
 
 아래 사항들이 설치가 되어있어야합니다.
 
 ```
-예시
+* Back : node.js
+
+📦 My Planner Back
+├── 📂 controllers
+│   ├── updateData.js
+│   ├── deleteData.js
+│   ├── getData.js
+│   ├── postData.js
+│   └── postUser.js
+│
+├── 📂 database
+│   ├── database.js
+│   └── db.sql
+│
+├── 📂 routes
+│   ├── updateRoute.js
+│   ├── deleteRoute.js
+│   ├── getRoute.js
+│   └── postRoute.js
+│
+├── 📂 uploads
+│   └── (업로드된 파일들)
+│
+├── 📂 node_modules
+│   └── (의존성 모듈들)
+│
+├── index.js
+├── package-lock.json
+├── package.json
+└── README.md
+
+
+
+* DB : Postgresql 사용
+
+* Mariadb, MySQL 가능
+
+📦 users
+├── user_idx: SERIAL PRIMARY KEY      -- 자동 증가하는 기본 키
+├── name: VARCHAR(100) NOT NULL      -- 사용자 이름
+├── email: VARCHAR(100) UNIQUE NOT NULL  -- 사용자 이메일 
+└── password: VARCHAR(100) NOT NULL  -- 사용자 비밀번호
+
+📦 travel_project
+├── project_idx: SERIAL PRIMARY KEY   -- 자동 증가하는 기본 키
+├── user_idx: INT                     -- 사용자 테이블과 조인 컬럼 
+├── project_title: VARCHAR(255)       -- 프로젝트 제목
+├── project_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 프로젝트 생성일
+├── start_date: DATE NOT NULL         -- 프로젝트 시작일
+├── end_date: DATE NOT NULL           -- 프로젝트 종료일
+├── update_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 프로젝트 업데이트 날짜
+├── planner_title: VARCHAR(255)       -- 플래너 제목
+├── planner_description: TEXT         -- 플래너 설명
+├── planner_date: DATE                -- 플래너 생성일
+├── planner_update_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 플래너 업데이트 날짜
+└── planner_img: TEXT                 -- 플래너 이미지 URL 또는 경로
 ```
 
 ### Installing / 설치
@@ -42,10 +112,17 @@
 아래 사항들로 현 프로젝트에 관한 모듈들을 설치할 수 있습니다.
 
 ```
-예시
+* NPM 모듈 사용 (Package)
+
+* EXPRESS, CORS, DOTENV, NODEMON, PG
+
 ```
 
-## Running the tests / 테스트의 실행
+## 3.  구현 기능
+
+<p align="center">
+  <img src="./uploads/calendar.png">
+</p>
 
 어떻게 테스트가 이 시스템에서 돌아가는지에 대한 설명을 합니다
 
