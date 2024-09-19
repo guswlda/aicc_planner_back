@@ -51,6 +51,37 @@
 ```
 * Back : node.js
 
+📦 My Planner Back
+├── 📂 controllers
+│   ├── updateData.js
+│   ├── deleteData.js
+│   ├── getData.js
+│   ├── postData.js
+│   └── postUser.js
+│
+├── 📂 database
+│   ├── database.js
+│   └── db.sql
+│
+├── 📂 routes
+│   ├── updateRoute.js
+│   ├── deleteRoute.js
+│   ├── getRoute.js
+│   └── postRoute.js
+│
+├── 📂 uploads
+│   └── (업로드된 파일들)
+│
+├── 📂 node_modules
+│   └── (의존성 모듈들)
+│
+├── index.js
+├── package-lock.json
+├── package.json
+└── README.md
+
+
+
 * DB : Postgresql ( Mariadb, MySQL 가능)
 ```
 
