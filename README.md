@@ -143,11 +143,14 @@ Content-Type: application/json
 ```
 
 * POST - BODY ( user의 id와 여행 시작 날짜, 끝 날짜 )
-* front (react) => back (node.js) => DB (postgresql)에 저장합니다.
+* front (react) => back (node.js) => DB (postgresql)에 저장
 
 <p align="center">
   <img src="./uploads/createplanner.png">
 </p>
+
+* GET -  생성된 여행 프로젝트 ID, 여행 시작 날짜, 끝 날짜 데이터
+* DB (postgresql) <=> BACK (Node.js) => FRONT (React) GET 요청
 
 ```
 GET /get_calendar_data/:user_idx
@@ -161,6 +164,18 @@ GET /get_calendar_data/:user_idx
 ]
 
 ```
+```
+PATCH /update_planner_title
+
+{
+"project_title" : "부산 여행",
+"project_idx" : 1 
+}
+
+```
+
+* PATCH -  생성된 여행 프로젝트 ID, 여행 Title update
+* front (react) <=> back (node.js) => DB (postgresql) UPDATE 요청
 
 ```
 GET /get_travel_data/:user_idx
@@ -178,13 +193,18 @@ GET /get_travel_data/:user_idx
 
 ```
 
+* GET -  생성된 여행 프로젝트 ID, 여행 TITLE, 여행 시작 날짜, 끝 날짜, 여행 플래너 title, 내용, 작성 날짜, 이미지 데이터터
+* DB (postgresql) <=> BACK (Node.js) => FRONT (React) GET 요청
+
 ## 4. 배포
+
+### * Front & Back Flow
 
 <p align="center">
   <img src="./uploads/fullflow.png">
 </p>
 
-
+### Back (Node.js)
 
 ## Built With / 누구랑 만들었나요?
 
