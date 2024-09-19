@@ -124,6 +124,12 @@
   <img src="./uploads/calendar.png">
 </p>
 
+### 날짜 선택
+
+<p align="center">
+  <img src="./uploads/calendarselect.png">
+</p>
+
 ```
 POST /post_calendar
 Content-Type: application/json
@@ -132,6 +138,26 @@ Content-Type: application/json
   "user_idx": 1,
   "startDate": "2024-10-01",
   "endDate": "2024-10-07"
+}
+
+```
+
+<p align="center">
+  <img src="./uploads/createplanner.png">
+</p>
+
+```
+GET /get_travel_data/:user_idx
+
+{
+"project_idx": 73,
+"project_title": "경주 여행",
+"start_date": "2023-12-12T00:00:00.000Z",
+"end_date": "2023-12-14T00:00:00.000Z",
+"planner_title": "불국사와 첨성대 방문",
+"planner_description": "가족과 함께 경주로 역사 여행을 다녀왔어요 ~",
+"planner_date": "2024-08-15T00:00:00.000Z",
+"planner_img": "http://plannerback.guswldaiccproject.com/uploads/1726711358045.jpg"
 }
 
 ```
