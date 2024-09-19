@@ -48,7 +48,7 @@ exports.getCalendarData = async (req, res) => {
 
   try {
     const result = await database.query(
-      'SELECT project_idx, start_date, end_date FROM travel_project WHERE user_idx = $1 ORDER BY update_date DESC LIMIT 1',
+      'SELECT project_idx, start_date, end_date FROM travel_project WHERE user_idx = $1 ORDER BY update_date DESC',
       [user_idx]
     );
 
