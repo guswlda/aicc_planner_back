@@ -7,10 +7,15 @@
   <br>
 </p>
 
+배포 URL: https://myplanner.guswldaiccproject.com
+TestID : Test@gmail.com
+TESTPW : 12345
 
 ## Getting Started / 어떻게 시작하나요?
 
-이 곳에서 설치에 관련된 이야기를 해주시면 좋습니다.
+<p align="justify">
+프로젝트 개요/동기
+</p>
 
 ### Prerequisites / 선행 조건
 
