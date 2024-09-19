@@ -1,60 +1,93 @@
-# 프로젝트 이름
+# CRM 서비스 프로젝트
 
+## My Planner
 <p align="center">
   <br>
-  <img src="./uploads/mainpage.png"
+  <img src="./uploads/mainpage.png">
+  <br>
+</p>
+<p align="justify">
+  <br>
+  배포 URL: https://myplanner.guswldaiccproject.com
+  <br>
+  TestID : Test@gmail.com
+  <br>
+  TESTPW : 12345
   <br>
 </p>
 
-목차
 
-## 프로젝트 소개
+## Getting Started / 어떻게 시작하나요?
 
 <p align="justify">
-프로젝트 개요/동기
-</p>
 
-<p align="center">
-GIF Images
 </p>
-
-<br>
 
 ## 기술 스택
 
-| JavaScript | TypeScript |  React   |  Node   |
-| :--------: | :--------: | :------: | :-----: |
-|   ![js]    |   ![ts]    | ![react] | ![node] |
+| React      | Node       |  DB   
+| :--------: | :--------: | :------: | 
+|  ![react]  |  ![node]   | ![pg]    | 
 
-<br>
+### Prerequisites / 선행 조건
 
-## 구현 기능
+아래 사항들이 설치가 되어있어야합니다.
 
-### 기능 1
+```
+예시
+```
 
-### 기능 2
+### Installing / 설치
 
-### 기능 3
+아래 사항들로 현 프로젝트에 관한 모듈들을 설치할 수 있습니다.
 
-### 기능 4
+```
+예시
+```
 
-<br>
+## Running the tests / 테스트의 실행
 
-## 배운 점 & 아쉬운 점
+어떻게 테스트가 이 시스템에서 돌아가는지에 대한 설명을 합니다
 
-<p align="justify">
+### 테스트는 이런 식으로 동작합니다
 
-</p>
+왜 이렇게 동작하는지, 설명합니다
 
-<br>
+```
+예시
+```
 
-## 라이센스
+### 테스트는 이런 식으로 작성하시면 됩니다
 
-MIT &copy; [NoHack](mailto:lbjp114@gmail.com)
+```
+예시
+```
+
+## Deployment / 배포
+
+Add additional notes about how to deploy this on a live system / 라이브 시스템을 배포하는 방법
+
+## Built With / 누구랑 만들었나요?
+
+* [이름](링크) - 무엇 무엇을 했어요
+* [Name](Link) - Create README.md
+
+## Contributiong / 기여
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us. / [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) 를 읽고 이에 맞추어 pull request 를 해주세요.
+
+## License / 라이센스
+
+This project is licensed under the MIT License - see the [LICENSE.md](https://gist.github.com/PurpleBooth/LICENSE.md) file for details / 이 프로젝트는 MIT 라이센스로 라이센스가 부여되어 있습니다. 자세한 내용은 LICENSE.md 파일을 참고하세요.
+
+## Acknowledgments / 감사의 말
+
+* Hat tip to anyone whose code was used / 코드를 사용한 모든 사용자들에게 팁
+* Inspiration / 영감
+* etc / 기타
 
 <!-- Stack Icon Refernces -->
 
-[js]: /images/stack/javascript.svg
-[ts]: /images/stack/typescript.svg
-[react]: /images/stack/react.svg
-[node]: /images/stack/node.svg
+[react]: /uploads/react.png
+[node]: /uploads/nodejs.png
+[pg]: /uploads/pg.png
