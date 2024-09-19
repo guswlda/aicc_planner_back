@@ -142,6 +142,9 @@ Content-Type: application/json
 
 ```
 
+* POST - BODY ( user의 id와 여행 시작 날짜, 끝 날짜 )
+* front (react) => back (node.js) => DB (postgresql)에 저장합니다.
+
 <p align="center">
   <img src="./uploads/createplanner.png">
 </p>
