@@ -33,7 +33,7 @@ app.use(
 app.use(cookieParser());
 
 app.get('/', (req, res) => {
-  res.send('Hello World https not');
+  res.send('Hello World https completed');
 });
 
 // 'uploads' 폴더를 정적 파일로 서빙
