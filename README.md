@@ -19,7 +19,7 @@
 # 1. 프로젝트 소개 및 개발 목적
 
 
-## 프로젝트 소개
+### 프로젝트 소개
   
   *  AI를 통해 여행 계획을 작성하는 웹은 있습니다. 하지만 사용자가 직접 여행 날짜, 장소, 메모 등 하는 웹은 없습니다.
 
@@ -27,7 +27,7 @@
   * 여행을 좋아하는 사용자가 자신만의 여행 일지를 커스타마이징 하는 스케쥴링 시스템.
 
 
-## 프로젝트 개발 목적
+### 프로젝트 개발 목적
 
   * 체계적인 여행계획을 세울 수 있는 todo 리스트 
 
@@ -46,7 +46,17 @@
 
 # 2. 개발 환경
 
-아래 사항들이 설치가 되어있어야합니다.
+* Installing / 설치
+
+아래 사항들로 현 프로젝트에 관한 모듈들을 설치할 수 있습니다.
+
+```
+* NPM 모듈 사용 (Package)
+
+* EXPRESS, CORS, DOTENV, NODEMON, PG
+
+* Postgresql (AWS - RDS)
+```
 
 ```
 * Back : node.js
@@ -81,7 +91,6 @@
 └── README.md
 
 
-
 * DB : Postgresql 사용
 
 * Mariadb, MySQL 가능
@@ -107,24 +116,25 @@
 └── planner_img: TEXT                 -- 플래너 이미지 URL 또는 경로
 ```
 
-### Installing / 설치
-
-아래 사항들로 현 프로젝트에 관한 모듈들을 설치할 수 있습니다.
-
-```
-* NPM 모듈 사용 (Package)
-
-* EXPRESS, CORS, DOTENV, NODEMON, PG
-
-```
-
 ## 3.  구현 기능
+
+### 캘린더 기능
 
 <p align="center">
   <img src="./uploads/calendar.png">
 </p>
 
-어떻게 테스트가 이 시스템에서 돌아가는지에 대한 설명을 합니다
+```
+POST /post_calendar
+Content-Type: application/json
+
+{
+  "user_idx": 1,
+  "startDate": "2024-10-01",
+  "endDate": "2024-10-07"
+}
+
+```
 
 ### 테스트는 이런 식으로 동작합니다
 
