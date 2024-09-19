@@ -63,7 +63,7 @@
 아래 사항들로 현 프로젝트에 관한 모듈들을 설치할 수 있습니다.
 
 ```
-* NPM 모듈 사용
+* NPM 모듈 사용 (Package)
 
 * EXPRESS, CORS, DOTENV, NODEMON, PG
 
