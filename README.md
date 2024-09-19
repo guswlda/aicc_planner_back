@@ -120,11 +120,21 @@
 
 ## 3.  구현 기능
 
+## 캘린더 기능
+
 <p align="center">
   <img src="./uploads/calendar.png">
 </p>
 
-어떻게 테스트가 이 시스템에서 돌아가는지에 대한 설명을 합니다
+
+POST /post_calendar
+Content-Type: application/json
+
+{
+  "user_idx": 1,
+  "startDate": "2024-10-01",
+  "endDate": "2024-10-07"
+}
 
 ### 테스트는 이런 식으로 동작합니다
 
