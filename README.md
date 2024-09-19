@@ -148,7 +148,6 @@ Content-Type: application/json
 
 ```
 GET /get_travel_data/:user_idx
-Content-Type: application/json
 
 {
 "project_idx": 73,
@@ -156,10 +155,11 @@ Content-Type: application/json
 "start_date": "2023-12-12T00:00:00.000Z",
 "end_date": "2023-12-14T00:00:00.000Z",
 "planner_title": "불국사와 첨성대 방문",
-"planner_description": "가족과 함께 경주로 역사 여행을 다녀왔어요. \n\n불국사의 웅장한 건축물을 감상하고, 첨성대 근처에서 산책하며 한국의 고대 문화를 느꼈죠. \n\n석굴암도 방문했는데, 그 신비로운 분위기에 압도되었어요. \n\n전통 한옥에서의 하룻밤도 특별한 경험이었답니다.",
+"planner_description": "가족과 함께 경주로 역사 여행을 다녀왔어요 ~",
 "planner_date": "2024-08-15T00:00:00.000Z",
 "planner_img": "http://plannerback.guswldaiccproject.com/uploads/1726711358045.jpg"
-},
+}
+
 ```
 
 ### 테스트는 이런 식으로 동작합니다
