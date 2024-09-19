@@ -18,7 +18,7 @@ exports.getTravelData = async (req, res) => {
   try {
     const { user_idx } = req.params;
     const result = await database.query(
-      'SELECT project_idx, project_title, start_date, end_date, planner_title, planner_description, planner_date, planner_img FROM travel_project WHERE user_idx=$1 ORDER BY update_date DESC LIMIT 8',
+      'SELECT project_idx, project_title, start_date, end_date, planner_title, planner_description, planner_date, planner_img FROM travel_project WHERE user_idx=$1 ORDER BY update_date DESC',
       [user_idx]
     );
     res.status(201).json(result.rows);
@@ -32,7 +32,7 @@ exports.getProjectData = async (req, res) => {
   const { user_idx } = req.params;
   try {
     const result = await database.query(
-      'SELECT project_idx, project_title, start_date, end_date, planner_title, planner_description, planner_date, planner_img FROM travel_project WHERE user_idx=$1 ORDER BY update_date DESC LIMIT 8',
+      'SELECT project_idx, project_title, start_date, end_date, planner_title, planner_description, planner_date, planner_img FROM travel_project WHERE user_idx=$1 ORDER BY update_date DESC',
       [user_idx]
     );
     // console.log('Server Response:', result.rows);
@@ -48,7 +48,7 @@ exports.getCalendarData = async (req, res) => {
 
   try {
     const result = await database.query(
-      'SELECT project_idx, start_date, end_date FROM travel_project WHERE user_idx = $1 ORDER BY update_date DESC LIMIT 1',
+      'SELECT project_idx, start_date, end_date FROM travel_project WHERE user_idx = $1',
       [user_idx]
     );
 
