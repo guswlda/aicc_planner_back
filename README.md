@@ -20,8 +20,14 @@
 ## Getting Started / 어떻게 시작하나요?
 
 <p align="justify">
-프로젝트 개요/동기
+
 </p>
+
+## 기술 스택
+
+| React      | Node       |  DB   
+| :--------: | :--------: | :------: | 
+|  ![react]  |  ![node]   | ![pg]    | 
 
 ### Prerequisites / 선행 조건
 
@@ -79,3 +85,9 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 * Hat tip to anyone whose code was used / 코드를 사용한 모든 사용자들에게 팁
 * Inspiration / 영감
 * etc / 기타
+
+<!-- Stack Icon Refernces -->
+
+[react]: /uploads/react.png
+[node]: /uploads/nodejs.png
+[pg]: /uploads/pg.png
