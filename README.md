@@ -46,6 +46,18 @@
 
 # 2. 개발 환경
 
+* Installing / 설치
+
+아래 사항들로 현 프로젝트에 관한 모듈들을 설치할 수 있습니다.
+
+```
+* NPM 모듈 사용 (Package)
+
+* EXPRESS, CORS, DOTENV, NODEMON, PG
+
+* Postgresql (AWS - RDS)
+```
+
 ```
 * Back : node.js
 
@@ -79,7 +91,6 @@
 └── README.md
 
 
-
 * DB : Postgresql 사용
 
 * Mariadb, MySQL 가능
@@ -103,16 +114,6 @@
 ├── planner_date: DATE                -- 플래너 생성일
 ├── planner_update_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 플래너 업데이트 날짜
 └── planner_img: TEXT                 -- 플래너 이미지 URL 또는 경로
-```
-
-* Installing / 설치
-
-아래 사항들로 현 프로젝트에 관한 모듈들을 설치할 수 있습니다.
-
-```
-* NPM 모듈 사용 (Package)
-
-* EXPRESS, CORS, DOTENV, NODEMON, PG
 ```
 
 ## 3.  구현 기능
