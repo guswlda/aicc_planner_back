@@ -1,4 +1,4 @@
-# Project Title / CRM 서비스 프로젝트
+# CRM 서비스 프로젝트
 
 ## My Planner
 <p align="center">
