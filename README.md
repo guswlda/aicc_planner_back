@@ -5,8 +5,7 @@
   <br>
   <img src="./uploads/mainpage.png">
   <br>
-</p>
-<p align="justify">
+
   <br>
   배포 URL: https://myplanner.guswldaiccproject.com
   <br>
