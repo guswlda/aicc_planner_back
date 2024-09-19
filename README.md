@@ -16,7 +16,6 @@
   <br>
 </p>
 
-
 1. Getting Started / 프로젝트 소개 및 개발 목적
 <p align="justify">
   <br>
