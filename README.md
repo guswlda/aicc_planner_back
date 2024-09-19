@@ -120,7 +120,9 @@
 
 ## 3.  구현 기능
 
-
+<p align="center">
+  <img src="./uploads/calendar.png">
+</p>
 
 어떻게 테스트가 이 시스템에서 돌아가는지에 대한 설명을 합니다
 
