@@ -63,7 +63,10 @@
 아래 사항들로 현 프로젝트에 관한 모듈들을 설치할 수 있습니다.
 
 ```
-예시
+* NPM 모듈 사용
+
+* EXPRESS, CORS, DOTENV, NODEMON, PG
+
 ```
 
 ## Running the tests / 테스트의 실행
