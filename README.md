@@ -16,7 +16,7 @@
   <br>
 </p>
 
-1. Getting Started / 프로젝트 소개 및 개발 목적
+# 1. Getting Started / 프로젝트 소개 및 개발 목적
 <p align="justify">
   <br>
   *  AI를 통해 여행 계획을 작성하는 웹은 있습니다. 하지만 사용자가 직접 여행 날짜, 장소, 메모 등 하는 웹은 없습니다.
@@ -38,7 +38,7 @@
   <br>
 </p>
 
-2. Development environment / 개발 환경
+# 2. Development environment / 개발 환경
 
 아래 사항들이 설치가 되어있어야합니다.
 
