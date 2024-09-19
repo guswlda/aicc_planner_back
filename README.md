@@ -1,7 +1,4 @@
-# CRM 서비스 프로젝트
-
-My Planner
-
+# CRM 서비스 프로젝트 / My Planner
 
 <p align="center">
   <img src="./uploads/mainpage.png">
