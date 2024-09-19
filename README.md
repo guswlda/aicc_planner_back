@@ -17,7 +17,7 @@
 </p>
 
 
-## Getting Started / 프로젝트 소개
+## Getting Started / 프로젝트 소개 및 개발 목적
 
 <p align="justify">
   <br>
@@ -25,7 +25,6 @@
   <br>
   * 여행을 좋아하는 사용자가 자신만의 여행 일지를 커스타마이징 하는 여행 스케쥴링 시스템.
 </p>
-
 <p align="justify">
   <br>
   * 체계적인 여행계획을 세울 수 있는 todo 리스트 
