@@ -10,10 +10,10 @@
   배포 URL: https://myplanner.guswldaiccproject.com
 
   
-  TestID : Test@gmail.com
+  Test_ID : Test@gmail.com
 
 
-  TESTPW : 12345
+  TEST_PW : 12345
 
 
 </p>
