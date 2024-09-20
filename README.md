@@ -59,58 +59,62 @@ Package - node.js
 
 * Back : node.js
 
-📦 My Planner Back
-├── 📂 controllers
-│   ├── updateData.js
-│   ├── deleteData.js
-│   ├── getData.js
-│   ├── postData.js
-│   └── postUser.js
+# Backend Project Structure
+
+## 📂 Project Structure
+├── 📁 data
+│   ├── 📁 database
+│   │   └── 🗃️ database.js
+│   └── 📄 sampleData.json
 │
-├── 📂 database
-│   ├── database.js
-│   └── db.sql
+├── 📁 routes
+│   ├── 🛣️ calendarRoutes.js
+│   └── 🛣️ userRoutes.js
 │
-├── 📂 routes
-│   ├── updateRoute.js
-│   ├── deleteRoute.js
-│   ├── getRoute.js
-│   └── postRoute.js
+├── 📁 uploads
+│   └── 📁 images
 │
-├── 📂 uploads
-│   └── (업로드된 파일들)
-│
-├── 📂 node_modules
-│   └── (의존성 모듈들)
-│
-├── index.js
-├── package-lock.json
-├── package.json
-└── README.md
+├── 📄 index.js
+├── 📄 README.md
+└── 📄 package.json
+
+## 🚀 API Endpoints
+├── POST /post_calendar
+├── GET /get_travel_data/:user_idx/:project_idx
+└── GET /get_user_data/:user_id
+
+## 🔧 Configuration
+├── 🔑 Environment Variables
+│   └── .env
+├── 📄 Middleware
+│   └── authMiddleware.js
+└── 📄 Error Handling
+    └── errorHandler.js
+
 
 * DB : Postgresql 
 
-📦 users
-├── user_idx: SERIAL PRIMARY KEY      -- 자동 증가하는 기본 키
-├── name: VARCHAR(100) NOT NULL      -- 사용자 이름
-├── email: VARCHAR(100) UNIQUE NOT NULL  -- 사용자 이메일 
-└── password: VARCHAR(100) NOT NULL  -- 사용자 비밀번호
+## 📦 users
+├── 👤 user_idx: SERIAL PRIMARY KEY        -- 자동 증가하는 기본 키
+├── 📝 name: VARCHAR(100) NOT NULL         -- 사용자 이름
+├── 📧 email: VARCHAR(100) UNIQUE NOT NULL  -- 사용자 이메일 
+└── 🔒 password: VARCHAR(100) NOT NULL      -- 사용자 비밀번호
 
-📦 travel_project
-├── project_idx: SERIAL PRIMARY KEY   -- 자동 증가하는 기본 키
-├── user_idx: INT                     -- 사용자 테이블과 조인 컬럼 
-├── project_title: VARCHAR(255)       -- 프로젝트 제목
-├── project_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 프로젝트 생성일
-├── start_date: DATE NOT NULL         -- 프로젝트 시작일
-├── end_date: DATE NOT NULL           -- 프로젝트 종료일
-├── update_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 프로젝트 업데이트 날짜
-├── planner_title: VARCHAR(255)       -- 플래너 제목
-├── planner_description: TEXT         -- 플래너 설명
-├── planner_date: DATE                -- 플래너 생성일
-├── planner_update_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 플래너 업데이트 날짜
-└── planner_img: TEXT                 -- 플래너 이미지 URL 또는 경로
+## 📦 travel_project
+├── 🗂️ project_idx: SERIAL PRIMARY KEY      -- 자동 증가하는 기본 키
+├── 🔗 user_idx: INT                        -- 사용자 테이블과 조인 컬럼 
+├── 📅 project_title: VARCHAR(255)          -- 프로젝트 제목
+├── 🕒 project_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 프로젝트 생성일
+├── 🗓️ start_date: DATE NOT NULL            -- 프로젝트 시작일
+├── 🗓️ end_date: DATE NOT NULL              -- 프로젝트 종료일
+├── 🛠️ update_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 프로젝트 업데이트 날짜
+├── 📚 planner_title: VARCHAR(255)          -- 플래너 제목
+├── 📜 planner_description: TEXT             -- 플래너 설명
+├── 📅 planner_date: DATE                    -- 플래너 생성일
+├── 🕒 planner_update_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 플래너 업데이트 날짜
+└── 🖼️ planner_img: TEXT                     -- 플래너 이미지 URL 또는 경로
+
 ```
-
 
 
 # 3.  구현 기능
@@ -235,28 +239,28 @@ GET /get_travel_data/:user_idx
 ### Back (Node.js)
 
 ```
-📦 Back - Node.js Deploy
+# 📦 Back - Node.js Deploy
 ├── 📂 aws
-│   ├── ec2
-│   │   ├── nginx.conf
-│   │   ├── pm2
-│   │   └── actions-runner
-│   ├── 인증서
-│   │   └── SSL 인증서 (https)
-│   ├── route53
-│   │   └── 도메인 설정 파일 (origin)
-│   └── cloudfront
-│       └── CDN 설정 파일
+│   ├── 🖥️ ec2
+│   │   ├── 📄 nginx.conf
+│   │   ├── ⚙️ pm2
+│   │   └── 🏃‍♂️ actions-runner
+│   ├── 🔒 인증서
+│   │   └── 📄 SSL 인증서 (https)
+│   ├── 🌐 route53
+│   │   └── 📄 도메인 설정 파일 (origin)
+│   └── ☁️ cloudfront
+│       └── 📄 CDN 설정 파일
 │
 ├── 📂 github
-│   ├── runner
-│   │   └── self-hosted-runner 설정
-│   ├── env
-│   │   └── 환경 변수 (database, login secret key 등)
-│   └── node.js
-│       └── config.js (Node.js 관련 환경 설정 파일)
+│   ├── 🤖 runner
+│   │   └── 📄 self-hosted-runner 설정
+│   ├── 🌿 env
+│   │   └── 📄 환경 변수 (database, login secret key 등)
+│   └── 🟢 node.js
+│       └── 📄 config.js (Node.js 관련 환경 설정 파일)
 │
-└── README.md
+└── 📄 README.md
 
 ```
 
@@ -271,19 +275,20 @@ GET /get_travel_data/:user_idx
 
 ```
 
-📦 travel_project
-├── project_idx: SERIAL PRIMARY KEY   -- 자동 증가하는 기본 키
-├── user_idx: INT                     -- 사용자 테이블과 조인 컬럼 
-├── project_title: VARCHAR(255)       -- 프로젝트 제목
-├── project_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 프로젝트 생성일
-├── start_date: DATE NOT NULL         -- 프로젝트 시작일
-├── end_date: DATE NOT NULL           -- 프로젝트 종료일
-├── update_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 프로젝트 업데이트 날짜
-├── planner_title: VARCHAR(255)       -- 플래너 제목
-├── planner_description: TEXT         -- 플래너 설명
-├── planner_date: DATE                -- 플래너 생성일
-├── planner_update_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 플래너 업데이트 날짜
-└── planner_img: TEXT                 -- 플래너 이미지 URL 또는 경로
+## 📦 travel_project
+├── 🗂️ project_idx: SERIAL PRIMARY KEY      -- 자동 증가하는 기본 키
+├── 🔗 user_idx: INT                        -- 사용자 테이블과 조인 컬럼 
+├── 📅 project_title: VARCHAR(255)          -- 프로젝트 제목
+├── 🕒 project_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 프로젝트 생성일
+├── 🗓️ start_date: DATE NOT NULL            -- 프로젝트 시작일
+├── 🗓️ end_date: DATE NOT NULL              -- 프로젝트 종료일
+├── 🛠️ update_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 프로젝트 업데이트 날짜
+├── 📚 planner_title: VARCHAR(255)          -- 플래너 제목
+├── 📜 planner_description: TEXT             -- 플래너 설명
+├── 📅 planner_date: DATE                    -- 플래너 생성일
+├── 🕒 planner_update_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 플래너 업데이트 날짜
+└── 🖼️ planner_img: TEXT                     -- 플래너 이미지 URL 또는 경로
+
 ```
 
 
