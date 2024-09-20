@@ -224,3 +224,7 @@ GET /get_travel_data/:user_idx
 └── README.md
 
 ```
+
+# 5. 트러블 슈팅
+
+# 6. 개발 후기
