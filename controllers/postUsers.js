@@ -44,7 +44,7 @@ exports.loginUser = async (req, res) => {
     const name = rows[0].name; // 사용자 이름
     const email = rows[0].email; // 사용자 이메일
     const token = jwt.sign({ user_idx, name, email }, process.env.SECRET_KEY, {
-      expiresIn: 0, // JWT 토큰 만료 시간 설정 (1일)
+      expiresIn: '1d', // JWT 토큰 만료 시간 설정 (1일)
     });
 
     return res.status(201).json({ token: token }); // 로그인 성공 시 토큰 반환
