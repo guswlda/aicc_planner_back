@@ -268,7 +268,7 @@ GET /get_travel_data/:user_idx
 # 5. 트러블 슈팅
 
 
-### 데이터 베이스 구조 생성 시 NOT NULL ERROR
+### DB NOT NULL ERROR
 
 
 * 처음 POST 할 user_idx, start_date, end_date 외 NOT NULL 값 제외 
@@ -293,8 +293,7 @@ GET /get_travel_data/:user_idx
 ```
 
 
-### index.js 
-
+### CORS ERROR
 
 * Deploy 이후 http://localhost:3000 origin error
 
@@ -314,7 +313,7 @@ app.use(
 ```
 
 
-### DB 저장된 startDate, endDate GET으로 가져오지 못한 error
+### DB 저장된 Data를 GET ERROR
 
 
 * 문자열로 포맷한 후 split을 통해 'YYYY-MM-DD' 형식으로 가공
