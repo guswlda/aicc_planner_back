@@ -136,7 +136,7 @@ Package - node.js
 </p>
 
 
-### 달력에서 날짜를 선택 - End Point POST (node.js) 를 통해 user_idx, startDate, endDate DB에 저장
+* 달력에서 날짜를 선택 - End Point POST (node.js) 를 통해 user_idx, startDate, endDate DB에 저장
 
 
 ```
@@ -156,7 +156,9 @@ Content-Type: application/json
 * front (react) => back (node.js) => DB (postgresql)에 저장
 
 
-### 화면이 이동하여 여행 목록 생성되어 여행 시작 날짜와 끝 날짜 표현
+### 여행 목록 생성
+
+* 화면이 이동하여 여행 목록 생성되어 여행 시작 날짜와 끝 날짜 표현
 
 
 <p align="center">
@@ -181,7 +183,7 @@ GET /get_calendar_data/:user_idx
 * DB (postgresql) <=> BACK (Node.js) => FRONT (React) GET 요청
 
 
-### 여행 목록을 작성 후 여행 플래너 생성
+### 여행 목차 생성 완료
 
 
 <p align="center">
