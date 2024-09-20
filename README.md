@@ -14,9 +14,9 @@
 
 
   TEST_PW : 12345
-
-
 </p>
+
+
 
 # 1. 프로젝트 소개 & 목적
 
@@ -43,9 +43,12 @@
   * 여행 장소를 시 우측에 내가 적었던 여행 정보 표현, 수정 및 삭제 가능
 
 
+
 # 2. 개발 환경
 
+
 * 기술 스택
+
 
 ```
 * BACK & DB
@@ -108,19 +111,28 @@ Package - node.js
 └── planner_img: TEXT                 -- 플래너 이미지 URL 또는 경로
 ```
 
+
 # 3.  구현 기능
 
+
 ### 캘린더 기능
+
 
 <p align="center">
   <img src="./uploads/calendar.png">
 </p>
 
+
 ### 날짜 선택
+
 
 <p align="center">
   <img src="./uploads/calendarselect.png">
 </p>
+
+
+### 달력에서 날짜를 선택 - End Point POST (node.js) 를 통해 user_idx, startDate, endDate DB에 저장
+
 
 ```
 POST /post_calendar
@@ -134,12 +146,18 @@ Content-Type: application/json
 
 ```
 
+
 * POST - BODY ( user의 id와 여행 시작 날짜, 끝 날짜 )
 * front (react) => back (node.js) => DB (postgresql)에 저장
+
+
+### 화면이 이동하여 여행 목록 생성되어 여행 시작 날짜와 끝 날짜 표현
+
 
 <p align="center">
   <img src="./uploads/createplanner.png">
 </p>
+
 
 ```
 GET /get_calendar_data/:user_idx
@@ -158,6 +176,9 @@ GET /get_calendar_data/:user_idx
 * DB (postgresql) <=> BACK (Node.js) => FRONT (React) GET 요청
 
 
+### 여행 목록을 작성 후 여행 플래너 생성
+
+
 <p align="center">
   <img src="./uploads/travelproject.png">
 </p>
@@ -174,6 +195,14 @@ PATCH /update_planner_title
 
 * PATCH -  생성된 여행 프로젝트 ID, 여행 Title update
 * front (react) <=> back (node.js) => DB (postgresql) UPDATE 요청
+
+
+### 여행 정보 작성 후 생성
+
+
+<p align="center">
+  <img src="./uploads/projectimg.png">
+</p>
 
 ```
 GET /get_travel_data/:user_idx
@@ -232,4 +261,91 @@ GET /get_travel_data/:user_idx
 
 # 5. 트러블 슈팅
 
+
+### 데이터 베이스 구조 생성 시 NOT NULL ERROR
+
+
+* 처음 POST 할 user_idx, start_date, end_date 외 NOT NULL 값 제외 
+
+
+```
+
+📦 travel_project
+├── project_idx: SERIAL PRIMARY KEY   -- 자동 증가하는 기본 키
+├── user_idx: INT                     -- 사용자 테이블과 조인 컬럼 
+├── project_title: VARCHAR(255)       -- 프로젝트 제목
+├── project_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 프로젝트 생성일
+├── start_date: DATE NOT NULL         -- 프로젝트 시작일
+├── end_date: DATE NOT NULL           -- 프로젝트 종료일
+├── update_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 프로젝트 업데이트 날짜
+├── planner_title: VARCHAR(255)       -- 플래너 제목
+├── planner_description: TEXT         -- 플래너 설명
+├── planner_date: DATE                -- 플래너 생성일
+├── planner_update_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 플래너 업데이트 날짜
+└── planner_img: TEXT                 -- 플래너 이미지 URL 또는 경로
+```
+
+
+### index.js 
+
+
+* Deploy 이후 http://localhost:3000 origin error
+
+
+* cors의 origin을 Deploy한 주소로 수정
+
+  
+```
+app.use(
+  cors({
+    // origin: 'http://localhost:3000',
+    origin: 'https://myplanner.guswldaiccproject.com',
+    credentials: true,
+  })
+);
+
+```
+
+
+### DB 저장된 startDate, endDate GET으로 가져오지 못한 error
+
+
+* 문자열로 포맷한 후 split을 통해 'YYYY-MM-DD' 형식으로 가공
+
+
+```
+exports.getCalendarData = async (req, res) => {
+  const { user_idx } = req.params;
+
+  try {
+    const result = await database.query(
+      'SELECT project_idx, start_date, end_date FROM travel_project WHERE user_idx = $1',
+      [user_idx]
+    );
+
+    // 날짜를 문자열 형식으로 포맷팅 (YYYY-MM-DD)
+    const formattedResult = result.rows.map((row) => ({
+      project_idx: row.project_idx, // project_idx 포함
+      start_date: row.start_date.toISOString().split('T')[0], // 'YYYY-MM-DD'
+      end_date: row.end_date.toISOString().split('T')[0], // 'YYYY-MM-DD'
+    }));
+
+    // console.log(req.params);
+    res.json(formattedResult);
+  } catch (error) {
+    console.error('Error fetching travel data:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+};
+
+```
+
 # 6. 개발 후기
+
+
+### 아쉬운 점 & 배운점
+
+
+* 총 3주 프로젝트 기간에 피피티와 함께 병행하면서 시간이 부족하여 하나씩 찾아가며 하지 못한 점이 아쉽습니다.
+
+* DB 구조와 Back - end point 데이터 플로우를 알게 되었습니다.
