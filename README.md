@@ -297,7 +297,7 @@ GET /get_travel_data/:user_idx
 ```
 
 
-### CORS ERROR
+### CORS ORIGIN ERROR
 
 * Deploy 이후 http://localhost:3000 origin error
 
