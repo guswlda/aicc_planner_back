@@ -204,8 +204,8 @@ GET /get_travel_data/:user_idx
 ├── 📂 aws
 │   ├── ec2
 │   │   ├── nginx.conf
-│   │   ├── pm
-│   │   └── app.js
+│   │   ├── pm2
+│   │   └── actions-runner
 │   ├── 인증서
 │   │   └── SSL 인증서 (https)
 │   ├── route53
@@ -217,10 +217,9 @@ GET /get_travel_data/:user_idx
 │   ├── runner
 │   │   └── self-hosted-runner 설정
 │   ├── env
-│   │   └── 환경 변수 (AWS_ACCESS_KEY, EC2_PUBLIC_IP 등)
-│   └── 📂 .github
-│       └── workflows
-│           └── cicd.yml (CI/CD 파이프라인 설정 파일)
+│   │   └── 환경 변수 (database, login secret key 등)
+│   └── node.js
+│       └── config.js (Node.js 관련 환경 설정 파일)
 │
 └── README.md
 
