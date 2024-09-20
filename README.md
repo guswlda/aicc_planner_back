@@ -157,6 +157,11 @@ GET /get_calendar_data/:user_idx
 * GET -  생성된 여행 프로젝트 ID, 여행 시작 날짜, 끝 날짜 데이터
 * DB (postgresql) <=> BACK (Node.js) => FRONT (React) GET 요청
 
+
+<p align="center">
+  <img src="./uploads/travelproject.png">
+</p>
+
 ```
 PATCH /update_planner_title
 
