@@ -1,4 +1,6 @@
-# CRM 서비스 프로젝트 / My Planner
+# CRM Service Project 
+
+* My Travel Planner
 
 <p align="center">
   <img src="./uploads/mainpage.png">
@@ -8,57 +10,50 @@
   배포 URL: https://myplanner.guswldaiccproject.com
 
   
-  TestID : Test@gmail.com
+  Test_ID : Test@gmail.com
 
 
-  TESTPW : 12345
+  TEST_PW : 12345
 
 
 </p>
 
-# 1. 프로젝트 소개 및 개발 목적
+# 1. 프로젝트 소개 & 목적
 
 
 ### 프로젝트 소개
   
-  *  AI를 통해 여행 계획을 작성하는 웹은 있습니다. 하지만 사용자가 직접 여행 날짜, 장소, 메모 등 하는 웹은 없습니다.
+  *  AI를 통해 여행 계획을 작성하는 웹은 있습니다.
+  
+  
+  *  사용자가 달력으로 여행 날짜, 장소, 정보 작성 하는 웹은 없습니다.
+  
+
+  * 여행 계획 뿐만 아니라 사용자가 방문했던 장소를 사진을 등록하고 여행 정보를 작성 할 수 있는 시스템
 
 
-  * 여행을 좋아하는 사용자가 자신만의 여행 일지를 커스타마이징 하는 스케쥴링 시스템.
+### 프로젝트 목적
+
+  * 구글 지도 제공하여 로드맵 확인 가능
 
 
-### 프로젝트 개발 목적
-
-  * 체계적인 여행계획을 세울 수 있는 todo 리스트 
+  * 일정 계획을 통해 캘린더에서 날짜를 선택하여 목록 생성
 
 
-  * 여행 계획 뿐만 아니라 사용자가 방문했던 장소를 사진을 등록하고 메모할 수 있는 시스템
-
-
-  1. 구글 지도 제공하여 로드맵 확인 가능
-
-
-  2. 일정버튼을 클릭하면 캘린더에서 날짜를 선택
-
-
-  3. 날짜에 따라서 좌측에 나열된 장소를 클릭하면 우측에 내가 적었던 메모리스트가 나올 수 있고, 추가도 가능
+  * 여행 장소를 시 우측에 내가 적었던 여행 정보 표현, 수정 및 삭제 가능
 
 
 # 2. 개발 환경
 
-* Installing / 설치
-
-아래 사항들로 현 프로젝트에 관한 모듈들을 설치할 수 있습니다.
+* 기술 스택
 
 ```
-* NPM 모듈 사용 (Package)
+* BACK & DB
+
+Package - node.js
 
 * EXPRESS, CORS, DOTENV, NODEMON, PG
 
-* Postgresql (AWS - RDS)
-```
-
-```
 * Back : node.js
 
 📦 My Planner Back
@@ -90,10 +85,7 @@
 ├── package.json
 └── README.md
 
-
-* DB : Postgresql 사용
-
-* Mariadb, MySQL 가능
+* DB : Postgresql 
 
 📦 users
 ├── user_idx: SERIAL PRIMARY KEY      -- 자동 증가하는 기본 키
@@ -116,7 +108,7 @@
 └── planner_img: TEXT                 -- 플래너 이미지 URL 또는 경로
 ```
 
-## 3.  구현 기능
+# 3.  구현 기능
 
 ### 캘린더 기능
 
@@ -197,9 +189,9 @@ GET /get_travel_data/:user_idx
 * GET -  생성된 여행 프로젝트 ID, 여행 TITLE, 여행 시작 날짜, 끝 날짜, 여행 플래너 title, 내용, 작성 날짜, 이미지 데이터터
 * DB (postgresql) <=> BACK (Node.js) => FRONT (React) GET 요청
 
-## 4. 배포
+# 4. 배포
 
-### * Front & Back Flow
+### Front & Back Flow
 
 <p align="center">
   <img src="./uploads/fullflow.png">
@@ -207,27 +199,28 @@ GET /get_travel_data/:user_idx
 
 ### Back (Node.js)
 
-## Built With / 누구랑 만들었나요?
+```
+📦 Back - Node.js Deploy
+├── 📂 aws
+│   ├── ec2
+│   │   ├── nginx.conf
+│   │   ├── pm2
+│   │   └── actions-runner
+│   ├── 인증서
+│   │   └── SSL 인증서 (https)
+│   ├── route53
+│   │   └── 도메인 설정 파일 (origin)
+│   └── cloudfront
+│       └── CDN 설정 파일
+│
+├── 📂 github
+│   ├── runner
+│   │   └── self-hosted-runner 설정
+│   ├── env
+│   │   └── 환경 변수 (database, login secret key 등)
+│   └── node.js
+│       └── config.js (Node.js 관련 환경 설정 파일)
+│
+└── README.md
 
-* [이름](링크) - 무엇 무엇을 했어요
-* [Name](Link) - Create README.md
-
-## Contributiong / 기여
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us. / [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) 를 읽고 이에 맞추어 pull request 를 해주세요.
-
-## License / 라이센스
-
-This project is licensed under the MIT License - see the [LICENSE.md](https://gist.github.com/PurpleBooth/LICENSE.md) file for details / 이 프로젝트는 MIT 라이센스로 라이센스가 부여되어 있습니다. 자세한 내용은 LICENSE.md 파일을 참고하세요.
-
-## Acknowledgments / 감사의 말
-
-* Hat tip to anyone whose code was used / 코드를 사용한 모든 사용자들에게 팁
-* Inspiration / 영감
-* etc / 기타
-
-<!-- Stack Icon Refernces -->
-
-[react]: /uploads/react.png
-[node]: /uploads/nodejs.png
-[pg]: /uploads/pg.png
+```
