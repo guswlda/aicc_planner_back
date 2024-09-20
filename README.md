@@ -1,4 +1,6 @@
-# CRM 서비스 프로젝트 / My Planner
+# CRM Service Project 
+
+## My Travel Planner
 
 <p align="center">
   <img src="./uploads/mainpage.png">
