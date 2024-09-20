@@ -361,4 +361,4 @@ exports.getCalendarData = async (req, res) => {
 * DB 구조와 Back - End Point 데이터 플로우를 알게 되었습니다.
 
 
-* useParams 또는 url query 사용법이 어려웠습니다.
+* useParams 또는 Query Parameter 사용법이 어려웠습니다.
