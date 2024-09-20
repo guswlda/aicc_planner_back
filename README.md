@@ -189,7 +189,7 @@ GET /get_travel_data/:user_idx
 
 # 4. 배포
 
-### * Front & Back Flow
+### Front & Back Flow
 
 <p align="center">
   <img src="./uploads/fullflow.png">
