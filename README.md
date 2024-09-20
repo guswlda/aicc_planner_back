@@ -47,7 +47,7 @@
 # 2. 개발 환경
 
 
-* 기술 스택
+* 기술 스택 & 채택 이유
 
 
 ```
@@ -110,6 +110,7 @@ Package - node.js
 ├── planner_update_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 플래너 업데이트 날짜
 └── planner_img: TEXT                 -- 플래너 이미지 URL 또는 경로
 ```
+
 
 
 # 3.  구현 기능
