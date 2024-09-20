@@ -47,8 +47,9 @@
 # 2. 개발 환경
 
 
-* 기술 스택 & 채택 이유
+### 기술 스택
 
+### Back (Node.js) & DB (Postgresql)
 
 ```
 * BACK & DB
