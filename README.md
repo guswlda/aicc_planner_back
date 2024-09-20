@@ -227,7 +227,6 @@ GET /get_travel_data/:user_idx
 "planner_date": "2024-08-15T00:00:00.000Z",
 "planner_img": "http://plannerback.guswldaiccproject.com/uploads/1726711358045.jpg"
 }
-
 ```
 
 * GET -  생성된 여행 프로젝트 ID, 여행 TITLE, 여행 시작 날짜, 끝 날짜, 여행 플래너 title, 내용, 작성 날짜, 이미지
