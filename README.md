@@ -142,9 +142,41 @@ Content-Type: application/json
 
 ```
 
+* POST - BODY ( user의 id와 여행 시작 날짜, 끝 날짜 )
+* front (react) => back (node.js) => DB (postgresql)에 저장
+
 <p align="center">
   <img src="./uploads/createplanner.png">
 </p>
+
+```
+GET /get_calendar_data/:user_idx
+
+[
+  {
+    "project_idx": 1,
+    "start_date": "2024-09-01",
+    "end_date": "2024-09-10"
+  }
+]
+
+```
+
+* GET -  생성된 여행 프로젝트 ID, 여행 시작 날짜, 끝 날짜 데이터
+* DB (postgresql) <=> BACK (Node.js) => FRONT (React) GET 요청
+
+```
+PATCH /update_planner_title
+
+{
+"project_title" : "부산 여행",
+"project_idx" : 1 
+}
+
+```
+
+* PATCH -  생성된 여행 프로젝트 ID, 여행 Title update
+* front (react) <=> back (node.js) => DB (postgresql) UPDATE 요청
 
 ```
 GET /get_travel_data/:user_idx
@@ -162,23 +194,18 @@ GET /get_travel_data/:user_idx
 
 ```
 
-### 테스트는 이런 식으로 동작합니다
+* GET -  생성된 여행 프로젝트 ID, 여행 TITLE, 여행 시작 날짜, 끝 날짜, 여행 플래너 title, 내용, 작성 날짜, 이미지 데이터터
+* DB (postgresql) <=> BACK (Node.js) => FRONT (React) GET 요청
 
-왜 이렇게 동작하는지, 설명합니다
+## 4. 배포
 
-```
-예시
-```
+### * Front & Back Flow
 
-### 테스트는 이런 식으로 작성하시면 됩니다
+<p align="center">
+  <img src="./uploads/fullflow.png">
+</p>
 
-```
-예시
-```
-
-## Deployment / 배포
-
-Add additional notes about how to deploy this on a live system / 라이브 시스템을 배포하는 방법
+### Back (Node.js)
 
 ## Built With / 누구랑 만들었나요?
 

@@ -92,7 +92,7 @@ exports.patchTravelData = async (req, res) => {
 // planner 제목 생성
 exports.updatePlannerTitle = async (req, res) => {
   const { project_title, project_idx } = req.body;
-  // console.log(req.body);
+  console.log(req.body);
 
   try {
     await database.query(
