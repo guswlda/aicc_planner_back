@@ -106,7 +106,7 @@ Package - node.js
 └── planner_img: TEXT                 -- 플래너 이미지 URL 또는 경로
 ```
 
-## 3.  구현 기능
+# 3.  구현 기능
 
 ### 캘린더 기능
 
