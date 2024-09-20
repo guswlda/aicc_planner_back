@@ -187,7 +187,7 @@ GET /get_travel_data/:user_idx
 * GET -  생성된 여행 프로젝트 ID, 여행 TITLE, 여행 시작 날짜, 끝 날짜, 여행 플래너 title, 내용, 작성 날짜, 이미지 데이터터
 * DB (postgresql) <=> BACK (Node.js) => FRONT (React) GET 요청
 
-## 4. 배포
+# 4. 배포
 
 ### * Front & Back Flow
 
