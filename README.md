@@ -123,7 +123,7 @@ Package - node.js
 # 3.  구현 기능
 
 
-### 캘린더 기능
+### 캘린더
 
 
 <p align="center">
@@ -186,7 +186,7 @@ GET /get_calendar_data/:user_idx
 * DB (postgresql) <=> BACK (Node.js) => FRONT (React) GET 요청
 
 
-### 여행 목차 생성 완료
+### 여행 목록 생성 완료
 
 
 <p align="center">
@@ -317,7 +317,7 @@ app.use(
 ```
 
 
-### DB 저장된 Data를 GET ERROR
+### DB 저장된 DATA GET ERROR
 
 
 * 문자열로 포맷한 후 split을 통해 'YYYY-MM-DD' 형식으로 가공
