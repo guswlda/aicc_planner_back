@@ -54,13 +54,7 @@
 
 
 ```
-* BACK & DB
-
-Package - node.js
-
-* EXPRESS, CORS, DOTENV, NODEMON, PG
-
-* Back : node.js
+* NPM Package : EXPRESS, CORS, DOTENV, NODEMON, PG
 
 # Backend Project Structure
 
@@ -94,7 +88,6 @@ Package - node.js
 └── 📄 Error Handling
     └── errorHandler.js
 
-
 * DB : Postgresql 
 
 ## 📦 users
@@ -116,7 +109,6 @@ Package - node.js
 ├── 📅 planner_date: DATE                    -- 플래너 생성일
 ├── 🕒 planner_update_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 플래너 업데이트 날짜
 └── 🖼️ planner_img: TEXT                     -- 플래너 이미지 URL 또는 경로
-
 ```
 
 
@@ -151,7 +143,6 @@ Content-Type: application/json
   "startDate": "2024-10-01",
   "endDate": "2024-10-07"
 }
-
 ```
 
 
@@ -179,7 +170,6 @@ GET /get_calendar_data/:user_idx
     "end_date": "2024-09-10"
   }
 ]
-
 ```
 
 * GET -  생성된 여행 프로젝트 ID, 여행 시작 날짜, 끝 날짜 데이터
@@ -200,7 +190,6 @@ PATCH /update_planner_title
 "project_title" : "부산 여행",
 "project_idx" : 1 
 }
-
 ```
 
 * PATCH -  생성된 여행 프로젝트 ID, 여행 Title update
@@ -265,7 +254,6 @@ GET /get_travel_data/:user_idx
 │       └── 📄 config.js (Node.js 관련 환경 설정 파일)
 │
 └── 📄 README.md
-
 ```
 
 # 5. 트러블 슈팅
@@ -292,7 +280,6 @@ GET /get_travel_data/:user_idx
 ├── 📅 planner_date: DATE                    -- 플래너 생성일
 ├── 🕒 planner_update_date: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  -- 플래너 업데이트 날짜
 └── 🖼️ planner_img: TEXT                     -- 플래너 이미지 URL 또는 경로
-
 ```
 
 
@@ -312,7 +299,6 @@ app.use(
     credentials: true,
   })
 );
-
 ```
 
 
@@ -346,7 +332,6 @@ exports.getCalendarData = async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 };
-
 ```
 
 # 6. 개발 후기
