@@ -340,10 +340,10 @@ exports.getCalendarData = async (req, res) => {
 ### 아쉬운 점 & 배운점
 
 
-* 총 3주 프로젝트 기간에 피피티와 함께 병행하면서 시간이 부족하여 하나씩 찾아가며 하지 못한 점이 아쉽습니다.
+* 개발 사항의 오류를 하나씩 찾아가며 하지 못한 점이 아쉽습니다.
   
 
 * DB 구조와 Back - End Point 데이터 플로우를 알게 되었습니다.
 
 
-* useParams 또는 Query Parameter 사용법이 어려웠습니다.
+* useParams 또는 Query Parameter로 데이터를 넘기는 방법이 어려웠습니다.
