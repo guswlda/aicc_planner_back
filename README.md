@@ -6,10 +6,6 @@
   <img src="./uploads/mainpage.png">
 </p>
 
-<P align="justify">
-  배포 URL: https://myplanner.guswldaiccproject.com
-</p>
-
 
 # 1. 프로젝트 소개 & 목적
 
